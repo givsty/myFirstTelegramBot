@@ -4,6 +4,7 @@ const token = '5652973267:AAE6TVf4u8CfGUZkWyloV5ZWJEtMfzVJPVw'
 
 const bot = new TelegramApi(token, {polling: true})
 
+//Доделать кнопки
 /*const gameOptions = {
     reply_markup: JSON.stringify({
         inline_keyboard: [
@@ -33,17 +34,11 @@ const start = () => {
         if(text === '/info') {
             return bot.sendMessage(chatId, `Список команд :\n/start\n/info\n/game`)
         }
-        if(text === '/game') {
+        if(text === '/game') { // Доделать игру угадайка
             return bot.sendMessage(chatId, 'Давай поиграем в игру угадайка =)')
             /*const randomNumber = Math.floor(Math.random() * 10)
             chats[chatId] = randomNumber;
             return bot.sendMessage(chatId, 'Отгадывай', gameOptions);*/
-        }
-        if (text === 'Пидор') {
-            return bot.sendMessage(chatId, `А может ты Пидор`)
-        }
-        if (text === 'Влад лох') {
-            return bot.sendMessage(chatId, 'Не могу с тобой не согласиться если ты про Никуткина')
         }
         return (await bot.sendMessage(chatId, `Я не понимаю тебя, ${msg.from.first_name}. Попробуй ввести другую команду.`), 
         await bot.sendSticker(chatId, 'https://tlgrm.ru/_/stickers/711/2ce/7112ce51-3cc1-42ca-8de7-62e7525dc332/31.webp'))
