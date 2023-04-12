@@ -29,7 +29,7 @@ const start = () => {
     
         if(text === '/start') {
             await bot.sendSticker(chatId, 'https://tlgrm.ru/_/stickers/da5/82c/da582c1a-839a-4199-9a10-f7a138282b5e/9.webp')
-            return bot.sendMessage(chatId, 'Добро пожаловать в самый хайповый бот на планете!')
+            return bot.sendMessage(chatId, 'Добро пожаловать!')
         }
         if(text === '/info') {
             return bot.sendMessage(chatId, `Список команд :\n/start\n/info\n/game`)
